@@ -1,9 +1,12 @@
-language: objective-c
+language: ruby
+
+script: true
 
 env:
   - TEAL=love
   - BLUE=love
 
-install: ls /dev
 
-script: "ruby -e 'sleep 30'"
+
+
+
