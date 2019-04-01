@@ -6,6 +6,10 @@ env:
   - BAZ=baz
   - BLAH=blah
   - BLOB=blob
+  - BLUB=blub
+  - GUB=gub
+  - SUB=sub
+  - TUB=tub
 
 install: ls /dev
 
