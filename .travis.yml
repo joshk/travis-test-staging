@@ -10,6 +10,9 @@ env:
   - GUB=gub
   - SUB=sub
   - TUB=tub
+  - WUB=wub
+  - RUB=rub
+  - DUB=dub
 
 install: ls /dev
 
