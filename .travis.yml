@@ -13,6 +13,18 @@ env:
   - WUB=wub
   - RUB=rub
   - DUB=dub
+  - FOOB=foob
+  - BARB=barb
+  - BAZAMATAZ=bazamataz
+  - BLAHBLAH=blahblah
+  - BLOBBY=blobby
+  - BLUBby=blubby
+  - GUBBY=gubby
+  - SUBWAY=subway
+  - TUBBY=tubby
+  - WUBALUBALUBLUB=wubalubalublub
+  - RUBADUBDUB=rubadubdub
+  - DUBSTEP=dubstep
 
 install: ls /dev
 
