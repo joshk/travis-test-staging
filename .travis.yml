@@ -1,4 +1,4 @@
-language: ruby
+language: bash
 
 env:
   - FOO=foo
@@ -26,6 +26,6 @@ env:
   - RUBADUBDUB=rubadubdub
   - DUBSTEP=dubstep
 
-install: ls /dev
+install: skip
 
-script: "ruby -e 'sleep 10'"
+script: docker run hello-world
