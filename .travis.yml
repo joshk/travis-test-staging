@@ -26,6 +26,6 @@ env:
   - RUBADUBDUB=rubadubdub
   - DUBSTEP=dubstep
 
-install: skip
+install: sudo snap install docker
 
 script: docker run hello-world
