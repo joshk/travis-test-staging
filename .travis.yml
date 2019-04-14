@@ -28,4 +28,8 @@ env:
 
 install: skip
 
-script: sudo docker run hello-world
+script:
+- sudo docker run hello-world
+- git clone https://github.com/travis-ci/travis-build.git
+- cd travis-build
+- sudo docker build .
