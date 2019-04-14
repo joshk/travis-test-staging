@@ -26,7 +26,8 @@ env:
   - RUBADUBDUB=rubadubdub
   - DUBSTEP=dubstep
 
-install: 
+install:
+- sleep 10
 - sudo snap install docker
 - sed -i 's/aufs/vfs/' /var/snap/docker/current/config/daemon.json
 - sudo snap start docker
