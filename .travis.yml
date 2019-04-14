@@ -28,4 +28,4 @@ env:
 
 install: skip
 
-script: docker run hello-world
+script: sudo docker run hello-world
