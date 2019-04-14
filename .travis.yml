@@ -30,7 +30,7 @@ install:
 - sudo systemctl start snapd
 - sleep 10
 - sudo snap install docker || (sleep 20 && sudo snap install docker)
-- sed -i 's/aufs/vfs/' /var/snap/docker/current/config/daemon.json
+- sudo sed -i 's/aufs/vfs/' /var/snap/docker/current/config/daemon.json
 - sudo snap start docker
 
 script: docker run hello-world
