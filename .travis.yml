@@ -26,10 +26,6 @@ env:
   - RUBADUBDUB=rubadubdub
   - DUBSTEP=dubstep
 
-install:
-- sudo snap install docker
-- sudo sed -i 's/aufs/vfs/' /var/snap/docker/current/config/daemon.json
-- sudo snap start docker
-- sleep 5
+install: skip
 
 script: docker run hello-world
