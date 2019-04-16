@@ -1,5 +1,7 @@
 language: bash
 
+image_name: travis-ci-opal-xenial-1554885320-f909ac5
+
 env:
   - FOO=foo
   - BAR=bar
