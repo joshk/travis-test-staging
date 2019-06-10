@@ -1,6 +1,6 @@
 language: bash
 
-image_name: travis-ci-opal-xenial*
+# image_name: travis-ci-opal-xenial*
 
 env:
   - FOO=foo
