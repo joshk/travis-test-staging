@@ -6,6 +6,19 @@ env:
   - FOO=foo
   - BAR=bar
   - BAZ=baz
+  - BLAH=blah
+  - BLOB=blob
+  - BLUB=blub
+  - GUB=gub
+  - SUB=sub
+  - TUB=tub
+  - WUB=wub
+  - RUB=rub
+  - DUB=dub
+  - FOOB=foob
+  - BARB=barb
+  - BAZAMATAZ=bazamataz
+  - BLAHBLAH=blahblah
 
 install: skip
 
