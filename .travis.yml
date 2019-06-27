@@ -4,11 +4,6 @@ node_js: 10.16
 
 arch: power
 
-env:
-  - FOO=foo
-  - BAR=bar
-  - BAZ=baz
-
 install: skip
 
 script:
