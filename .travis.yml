@@ -7,7 +7,7 @@ install: skip
 script:
 - sudo docker info
 - sudo docker run hello-world
-- sleep 300
+- sleep 600
 - git clone https://github.com/travis-ci/travis-build.git
 - cd travis-build
 - sudo docker build --build-arg GITHUB_OAUTH_TOKEN .
