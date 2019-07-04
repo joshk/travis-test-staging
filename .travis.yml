@@ -5,9 +5,13 @@ node_js: 10.16
 arch: arm64
 
 env:
-  - FOO=foo
-  - BAR=bar
-  - BAZ=baz
+- FOO=foo
+- BAR=bar
+- BAZ=baz
+- A=B
+- B=C
+- A=C
+- MAGIC=CIGAM
 
 install: skip
 
