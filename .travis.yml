@@ -7,12 +7,12 @@ arch: arm64
 env:
 - FOO=foo
 - BAR=bar
-- BAZ=baz
-- A=B
-- B=C
-- A=C
-- MAGIC=CIGAM
-- BOB=BOB
+# - BAZ=baz
+# - A=B
+# - B=C
+# - A=C
+# - MAGIC=CIGAM
+# - BOB=BOB
 
 install: skip
 
