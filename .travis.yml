@@ -7,7 +7,7 @@ arch: arm64
 env:
 - FOO=foo
 - BAR=bar
-# - BAZ=baz
+- BAZ=baz
 # - A=B
 # - B=C
 # - A=C
