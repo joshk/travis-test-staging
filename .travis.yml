@@ -12,6 +12,7 @@ env:
 - B=C
 - A=C
 - MAGIC=CIGAM
+- BOB=BOB
 
 install: skip
 
