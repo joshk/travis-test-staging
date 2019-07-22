@@ -8,11 +8,11 @@ env:
 - FOO=foo
 - BAR=bar
 - BAZ=baz
-# - A=B
-# - B=C
-# - A=C
-# - MAGIC=CIGAM
-# - BOB=BOB
+- A=B
+- B=C
+- A=C
+- MAGIC=CIGAM
+- BOB=BOB
 
 install: skip
 
