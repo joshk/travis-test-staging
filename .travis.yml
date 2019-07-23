@@ -8,18 +8,24 @@ env:
   - FOO=foo
   - BAR=bar
   - BAZ=baz
-  - 1=1
-  - 2=2
-  - 3=3
-  - 4=4
-  - 5=5
-  - 6=6
-  - 7=7
-  - 8=8
-  - 9=9
-  - 10=10
-  - 11=11
-  - 12=12
+  - FOO2=foo
+  - BAR2=bar
+  - BAZ2=baz
+  - FOO3=foo
+  - BAR3=bar
+  - BAZ3=baz
+  - FOO4=foo
+  - BAR4=bar
+  - BAZ4=baz
+  - FOO5=foo
+  - BAR5=bar
+  - BAZ5=baz
+  - FOO6=foo
+  - BAR6=bar
+  - BAZ6=baz
+  - FOO7=foo
+  - BAR7=bar
+  - BAZ7=baz
 
 install: skip
 
