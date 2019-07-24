@@ -32,6 +32,6 @@ install: skip
 script:
 - sudo docker info
 - sudo docker run hello-world
-- git clone https://github.com/travis-ci/travis-build.git
-- cd travis-build
-- sudo docker build --build-arg GITHUB_OAUTH_TOKEN .
+- git clone https://github.com/travis-ci/travis-web.git
+- cd travis-web
+- sudo docker build .
