@@ -32,7 +32,6 @@ install: skip
 script:
 - sudo docker info
 - sudo docker run hello-world
-- git clone https://github.com/travis-ci/travis-insights.git
-- cd travis-insights
-- git checkout dockerize
+- git clone https://github.com/travis-ci/travis-logs.git
+- cd travis-logs
 - sudo docker build .
