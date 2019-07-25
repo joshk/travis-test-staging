@@ -15,16 +15,26 @@ if [ -d /var/lib/docker-cache/overlay2 ]; then
     rm -Rf /var/lib/docker/overlay2
     mkdir -p /var/lib/docker/overlay2
     for entry in /var/lib/docker-cache/overlay2/*; do
-    basename=$(basename "${entry}")
-    if [ "${basename}" = "l" ]; then
-        continue
-    fi
+        basename=$(basename "${entry}")
+        if [ "${basename}" = "l" ]; then
+            continue
+        fi
 
-    mkdir "/var/lib/docker/overlay2/${basename}"
-        mount -o bind "${entry}" "/var/lib/docker/overlay2/${basename}"
+        mkdir "/var/lib/docker/overlay2/${basename}"
     done
 
     if [ -d /var/lib/docker-cache/overlay2/l ]; then
         cp -R /var/lib/docker-cache/overlay2/l /var/lib/docker/overlay2/l
     fi
+
+    systemctl restart docker
+
+    for entry in /var/lib/docker-cache/overlay2/*; do
+        basename=$(basename "${entry}")
+        if [ "${basename}" = "l" ]; then
+            continue
+        fi
+
+        mount -o bind "${entry}" "/var/lib/docker/overlay2/${basename}"
+    done
 fi
