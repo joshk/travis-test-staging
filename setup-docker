@@ -20,7 +20,7 @@ if [ -d /var/lib/docker-cache/overlay2 ]; then
             continue
         fi
 
-        ln -s "${entry}" "/var/lib/docker/overlay2/${basename}"
+        cp -R "${entry}" "/var/lib/docker/overlay2/${basename}"
     done
 
     if [ -d /var/lib/docker-cache/overlay2/l ]; then
