@@ -18,7 +18,6 @@ install: skip
 
 script:
 - sudo docker info
-- sudo ./setup-docker
 - sudo docker run hello-world
 - git clone https://github.com/travis-ci/travis-build.git
 - cd travis-build
