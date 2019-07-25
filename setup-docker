@@ -20,7 +20,7 @@ if [ -d /var/lib/docker-cache/overlay2 ]; then
             continue
         fi
 
-        mkdir "/var/lib/docker/overlay2/${basename}"
+        ln -s "${entry}" "/var/lib/docker/overlay2/${basename}"
     done
 
     if [ -d /var/lib/docker-cache/overlay2/l ]; then
@@ -28,13 +28,4 @@ if [ -d /var/lib/docker-cache/overlay2 ]; then
     fi
 
     systemctl restart docker
-
-    for entry in /var/lib/docker-cache/overlay2/*; do
-        basename=$(basename "${entry}")
-        if [ "${basename}" = "l" ]; then
-            continue
-        fi
-
-        mount -o bind "${entry}" "/var/lib/docker/overlay2/${basename}"
-    done
 fi
