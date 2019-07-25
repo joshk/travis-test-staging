@@ -1,0 +1,30 @@
+#!/bin/sh
+if [ ! -d /var/lib/docker ] || [ ! -d /var/lib/docker-cache ]; then
+    exit 0
+fi
+
+if [ -d /var/lib/docker-cache/image ]; then
+    rm -Rf /var/lib/docker/image
+    cp -R /var/lib/docker-cache/image /var/lib/docker/image
+fi
+
+if [ -d /var/lib/docker-cache/overlay2 ]; then
+    for mount in $(cat /proc/mounts  | grep /var/lib/docker/overlay2 | cut -d' ' -f2); do
+        umount "${mount}"
+    done
+    rm -Rf /var/lib/docker/overlay2
+    mkdir -p /var/lib/docker/overlay2
+    for entry in /var/lib/docker-cache/overlay2/*; do
+    basename=$(basename "${entry}")
+    if [ "${basename}" = "l" ]; then
+        continue
+    fi
+
+    mkdir "/var/lib/docker/overlay2/${basename}"
+        mount -o bind "${entry}" "/var/lib/docker/overlay2/${basename}"
+    done
+
+    if [ -d /var/lib/docker-cache/overlay2/l ]; then
+        cp -R /var/lib/docker-cache/overlay2/l /var/lib/docker/overlay2/l
+    fi
+fi
