@@ -13,4 +13,4 @@ script:
 - npm install
 - export INPUT_PYTHON_VERSION=3.3
 - export INPUT_ARCHITECTURE=x86
-- npm lib/setup-python.js
+- npm run lib/setup-python.js
