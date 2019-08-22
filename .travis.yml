@@ -10,7 +10,7 @@ node_js:
 script:
 - git clone https://github.com/actions/setup-python
 - cd setup-python
-- npm install
+- npm install --production
 - export INPUT_PYTHON_VERSION=3.3
 - export INPUT_ARCHITECTURE=x86
 - node lib/setup-python.js
