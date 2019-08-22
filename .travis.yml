@@ -14,4 +14,5 @@ script:
 - export INPUT_PYTHON_VERSION=3.3
 - export INPUT_ARCHITECTURE=x86
 - node lib/setup-python.js
+- cat /home/travis/build/joshk/travis-test-staging/setup-python/.github/python.json
 - python -V
