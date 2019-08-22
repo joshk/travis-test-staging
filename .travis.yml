@@ -13,5 +13,6 @@ script:
 - npm install --production
 - export INPUT_VERSION=1.9.3
 - export INPUT_ARCHITECTURE=x86
+- sudo mkdir /home/actions
 - node lib/setup-go.js
 - go version
