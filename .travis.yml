@@ -1,37 +1,11 @@
-language: bash
-
-env:
-  - FOO=foo
-  - BAR=bar
-  - BAZ=baz
-  - BLAH=blah
-  - BLOB=blob
-  - BLUB=blub
-  - GUB=gub
-  - SUB=sub
-  - TUB=tub
-  - WUB=wub
-  - RUB=rub
-  - DUB=dub
-  - FOOB=foob
-  - BARB=barb
-  - BAZAMATAZ=bazamataz
-  - BLAHBLAH=blahblah
-  - BLOBBY=blobby
-  - BLUBby=blubby
-  - GUBBY=gubby
-  - SUBWAY=subway
-  - TUBBY=tubby
-  - WUBALUBALUBLUB=wubalubalublub
-  - RUBADUBDUB=rubadubdub
-  - DUBSTEP=dubstep
+language: nodejs
 
 install: skip
 
 script:
-- sudo ./setup-docker
-- sudo docker info
-- sudo docker run hello-world
-- git clone https://github.com/travis-ci/travis-build.git
-- cd travis-build
-- sudo docker build --build-arg GITHUB_OAUTH_TOKEN .
+- git clone https://github.com/actions/setup-python
+- cd setup-python
+- npm install
+- export INPUT_PYTHON_VERSION=3.3
+- export INPUT_ARCHITECTURE=x86
+- npm lib/setup-python.js
