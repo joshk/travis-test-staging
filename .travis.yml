@@ -8,11 +8,10 @@ node_js:
 - 11
 
 script:
-- git clone https://github.com/actions/setup-python
-- cd setup-python
+- git clone https://github.com/actions/setup-go
+- cd setup-go
 - npm install --production
-- export INPUT_VERSION=3.7
+- export INPUT_VERSION=1.9.3
 - export INPUT_ARCHITECTURE=x86
-- node lib/setup-python.js
-- cat /home/travis/build/joshk/travis-test-staging/setup-python/.github/python.json
-- python -V
+- node lib/setup-go.js
+- go version
