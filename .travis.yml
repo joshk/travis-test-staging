@@ -11,7 +11,7 @@ script:
 - git clone https://github.com/actions/setup-python
 - cd setup-python
 - npm install --production
-- export INPUT_VERSION=3.3
+- export INPUT_VERSION=3.7
 - export INPUT_ARCHITECTURE=x86
 - node lib/setup-python.js
 - cat /home/travis/build/joshk/travis-test-staging/setup-python/.github/python.json
