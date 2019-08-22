@@ -14,3 +14,4 @@ script:
 - export INPUT_PYTHON_VERSION=3.3
 - export INPUT_ARCHITECTURE=x86
 - node lib/setup-python.js
+- python -V
